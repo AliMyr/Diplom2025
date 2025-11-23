@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class SortingData : MonoBehaviour
+[System.Serializable]
+public class SortingData
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public int value;
+    public GameObject barObject;
+    public Vector3 targetPosition;
 
-    // Update is called once per frame
-    void Update()
+    public SortingData(int value, GameObject barObject)
     {
-        
+        this.value = value;
+        this.barObject = barObject;
     }
 }

@@ -1,16 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ISortingAlgorithm : MonoBehaviour
+public interface ISortingAlgorithm
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    string AlgorithmName { get; }
+    string Description { get; }
+    string Complexity { get; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    IEnumerator Sort(List<int> array, VisualizationController visualizer, StatisticsTracker stats);
 }

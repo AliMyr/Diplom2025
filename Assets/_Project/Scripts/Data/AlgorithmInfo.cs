@@ -1,16 +1,12 @@
 using UnityEngine;
 
-public class AlgorithmInfo : MonoBehaviour
+[CreateAssetMenu(fileName = "AlgorithmInfo", menuName = "Sorting/Algorithm Info")]
+public class AlgorithmInfo : ScriptableObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string algorithmName;
+    [TextArea(3, 6)]
+    public string description;
+    public string timeComplexity;
+    public string spaceComplexity;
+    public bool isStable;
 }
